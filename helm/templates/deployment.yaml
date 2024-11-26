@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  #namespace: expense
+  namespace: expense
   labels:
     app: frontend
     tier: web
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: "{{ .Values.deployment.imageURL }}:{{ .Values.deployment.imageVersion }}
+        image: "{{ .Values.deployment.imageURL }}:{{ .Values.deployment.imageVersion }}"
         resources:
           requests:
             cpu: 100m
