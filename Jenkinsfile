@@ -27,7 +27,6 @@ pipeline {
                 }
             }
         }
-        
         stage('Docker build') {
             
             steps {
@@ -48,7 +47,6 @@ pipeline {
             steps{
                 withAWS(region: 'us-east-1', credentials: 'aws-creds') {
                     sh """
-                        
                         aws eks update-kubeconfig --region ${region} --name ${project}-${environment}
                         cd helm
                         sed -i 's/IMAGE_VERSION/${appVersion}/g' values-${environment}.yaml
@@ -72,3 +70,4 @@ pipeline {
         }
     }
 }
+    
