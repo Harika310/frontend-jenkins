@@ -4,5 +4,5 @@ deployment:
   imageURL: 905418172435.dkr.ecr.us-east-1.amazonaws.com/expense/dev/frontend
 hpa:
   cpuUtilization: 20
-tgb:
-  arn: arn:aws:elasticloadbalancing:us-east-1:905418172435:targetgroup/expense-dev/0e008d618915fc6f
+# tgb:
+#   arn: arn:aws:elasticloadbalancing:us-east-1:905418172435:targetgroup/expense-dev/0e008d618915fc6f
